@@ -19,6 +19,7 @@ class EnclaveController {
         respond enclaves
     }
 
+    @Secured(['ROLE_ADMIN'])
     def show(Enclave enclave) {
         respond enclave
     }

@@ -21,7 +21,8 @@ class KeywordController {
         }
         render (view: "index", model: [keywordCommandList: keywordCommands])
     }
-
+    
+    @Secured(['ROLE_ADMIN'])
     def show(Keyword keyword) {
         render (view: "show", status: OK, model: [keyword: keyword, enclaveList: KeywordEnclave.getEnclaves(keyword)])
     }
@@ -59,6 +60,7 @@ class KeywordController {
     }
 
     @Transactional
+    @Secured(['ROLE_ADMIN'])
     def update(KeywordCommand keywordCommand) {
         if (keywordCommand == null) {
             transactionStatus.setRollbackOnly()
@@ -90,6 +92,7 @@ class KeywordController {
     }
 
     @Transactional
+    @Secured(['ROLE_ADMIN'])
     def delete(Keyword keyword) {
 
         if (keyword == null) {
