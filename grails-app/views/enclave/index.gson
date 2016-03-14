@@ -1,0 +1,11 @@
+import com.aerstone.Enclave
+
+model {
+	Iterable<Enclave> enclaveList
+}
+
+json {
+	totalcount enclaveList? enclaveList.size() : 0
+	enclaves tmpl.enclave(enclaveList ?: [])
+}
+

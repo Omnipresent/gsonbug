@@ -1,0 +1,13 @@
+import com.aerstone.KeywordCommand
+
+model {
+    KeywordCommand keywordenclave
+}
+
+json {
+    id keywordenclave.id
+    name keywordenclave.name
+    alias keywordenclave.alias
+    isRegex keywordenclave.isRegex
+    enclaves g.render(template: "/keyword/enclave", collection: keywordenclave.enclaves, var: 'enclave')
+}

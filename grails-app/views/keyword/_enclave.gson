@@ -1,0 +1,9 @@
+import com.aerstone.Enclave
+
+model {
+    Enclave enclave
+}
+json {
+    id enclave.id
+    name enclave.name
+}

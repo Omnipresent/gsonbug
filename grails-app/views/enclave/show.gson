@@ -1,0 +1,7 @@
+import com.aerstone.Enclave
+
+model {
+	Enclave enclave
+}
+
+json tmpl.enclave(enclave)

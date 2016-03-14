@@ -1,0 +1,13 @@
+import com.aerstone.Enclave
+import com.aerstone.Keyword
+
+model {
+	Keyword keyword
+	List<Enclave> enclaveList
+}
+
+json {
+	id keyword.id
+	name keyword.name
+	enclaves tmpl.enclave(enclaveList)
+}

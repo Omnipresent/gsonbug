@@ -1,0 +1,9 @@
+import com.aerstone.Enclave
+import com.aerstone.Keyword
+
+model {
+	Keyword keyword
+	List<Enclave> enclaveList
+}
+
+json g.render(template: "keyword", model: [keyword: keyword, enclaveList: enclaveList])

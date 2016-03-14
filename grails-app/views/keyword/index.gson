@@ -1,0 +1,9 @@
+import com.aerstone.KeywordCommand
+
+model {
+	List<KeywordCommand> keywordCommandList
+}
+json {
+	totalcount keywordCommandList.size()
+	keywords tmpl.keywordenclave(keywordCommandList)
+}
