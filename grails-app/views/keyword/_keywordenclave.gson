@@ -10,4 +10,5 @@ json {
     alias keywordenclave.alias
     isRegex keywordenclave.isRegex
     enclaves g.render(template: "/keyword/enclave", collection: keywordenclave.enclaves, var: 'enclave')
+//    enclaves tmpl.enclave(keywordenclave.enclaves)
 }

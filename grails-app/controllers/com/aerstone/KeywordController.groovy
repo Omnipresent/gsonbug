@@ -1,6 +1,5 @@
 package com.aerstone
 
-import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
@@ -21,7 +20,7 @@ class KeywordController {
         }
         render (view: "index", model: [keywordCommandList: keywordCommands])
     }
-    
+
     @Secured(['ROLE_ADMIN'])
     def show(Keyword keyword) {
         render (view: "show", status: OK, model: [keyword: keyword, enclaveList: KeywordEnclave.getEnclaves(keyword)])

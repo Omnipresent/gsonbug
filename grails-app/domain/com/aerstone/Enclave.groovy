@@ -5,6 +5,6 @@ class Enclave {
     String name
 
     static constraints = {
-        name (nullable: false, unique: true)
+        name (nullable: false)
     }
 }
