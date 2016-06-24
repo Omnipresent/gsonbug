@@ -27,12 +27,8 @@ class BootStrap {
         keyone.save flush: true
         Keyword keytwo = new Keyword(name: "keywordtwo").save flush: true
         keytwo.save flush: true
-        new KeywordEnclave(keyone, one)
-        new KeywordEnclave(keyone, two)
-
-
-
-
+        new KeywordEnclave(keyone, one).save flush: true
+        new KeywordEnclave(keyone, two).save flush: true
     }
     def destroy = {
     }

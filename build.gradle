@@ -39,6 +39,7 @@ dependencyManagement {
 }
 
 dependencies {
+    runtime 'mysql:mysql-connector-java:5.1.36'
     compile 'org.grails.plugins:spring-security-core:3.0.3'
     compile "org.grails.plugins:spring-security-rest:2.0.0.M2"
     compile "org.springframework.boot:spring-boot-starter-logging"
@@ -62,7 +63,6 @@ dependencies {
     compile "org.grails.plugins:views-json"
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api:3.1.1"
-    runtime "com.h2database:h2"
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-datastore-rest-client"
